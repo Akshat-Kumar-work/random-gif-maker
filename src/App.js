@@ -8,6 +8,7 @@ function App() {
      <h1 className=' bg-white rounded-lg  w-11/12 text-center mt-[40px]  
      px-10 py-2 text-4xl font-bold '>RANDOM GIFS</h1>
 
+      
      <div className='flex flex-col '>
       <Random/>
       <Tag/>
