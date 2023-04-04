@@ -2,9 +2,6 @@ import {  useState } from "react";
 import useGif from "../hooks/useGif";
 import Spinner from "./Spinner"
  
-//to access environment variable 
-const api_key = process.env.REACT_APP_GIPHY_API_KEY; 
-
 
 function Tag(){ 
 
@@ -14,6 +11,7 @@ function Tag(){
 const {gif, loading , fetchData} = useGif(tag);
 
     function clickHandler(){
+    
         fetchData(tag)
     }
     
@@ -27,6 +25,7 @@ return(
             {loading? (<Spinner></Spinner>):(<img src={gif} width="450"/>)}
             
             <input className="w-10/12 text-lg py-2 rounded-lg mb-[3px] text-center" onChange={changeHandler} value={tag} placeholder="enter tag to generate random gif"></input>
+
             <button onClick={clickHandler} className=" w-10/12 bg-white opacity-70 text-lg py-2 rounded-lg mb-[20px]">Generate</button>
     </div>
 )

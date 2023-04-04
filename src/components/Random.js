@@ -2,8 +2,7 @@
 import Spinner from "./Spinner"
 import useGif from "../hooks/useGif";
  
-//to access environment variable 
-const api_key = process.env.REACT_APP_GIPHY_API_KEY; 
+
 
 
 function Random(){
