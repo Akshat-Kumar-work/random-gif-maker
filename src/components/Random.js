@@ -1,16 +1,20 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-const API_KEY = process.env.REACT_APP_GIPHY_API_KEY;
+//to access environment variable 
+
+const api_key = process.env.REACT_APP_GIPHY_API_KEY; 
 
 
 function Random(){
 
     const [gif , setGif] = useState('');
 
+
+
     async function fetchData (){
-        const url = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`;
+        const url = `https://api.giphy.com/v1/gifs/random?api_key=${api_key}`;
         const output =  await axios.get(url);
-        console.log(output)
+        console.log(output) 
     }
 
     useEffect( ()=>{
