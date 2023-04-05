@@ -8,7 +8,7 @@ import useGif from "../hooks/useGif";
 function Random(){
 
 //use gif naam k custom hook se value use kr rhe hai
-const {gif, loading , fetchData} = useGif();
+const [gif, loading , fetchData] = useGif();
 
     function clickHandler(tag){
         fetchData()

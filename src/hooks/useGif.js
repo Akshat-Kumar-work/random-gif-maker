@@ -23,8 +23,8 @@ const useGif= (tag)=>{
         fetchData()
     },[])
    
-    //ek array ki form m gif , loading , fetchdata ki value daldi
-    return {gif, loading,fetchData}
+    //ek array ki form m gif , loading , fetchdata ki value daldi , aur esko hum object ki form m bhi return kr skty hai
+    return [gif, loading,fetchData]
 }
 
 
